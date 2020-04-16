@@ -4,13 +4,13 @@ from datetime import datetime
 import argparse
 
 ## CHANGE_ME this is the directory where your notes are stored
-working_dir = "/Users/mselph/testing_notes"
+working_dir = "/full/path/to/dir"
 os.chdir(working_dir)
 
 ##CHANGE_ME These are the high level folders that need to be created; modify if you want other folders created
 folders = ["daily_notes", "incidents", "projects", "training"]
 
-
+## Parsers set up
 parser = argparse.ArgumentParser(description='Notey Script for all things Note Related')
 g = parser.add_mutually_exclusive_group()
 g.add_argument('-f', '--first', help='First Setup for Notey', action='store_true')
@@ -109,4 +109,6 @@ if args.end_of_day == True:
 if args.allmark == True:
 	kill_and_restart_allmark()
 
-
+if args.new_folder != None and len(args.new_folder) > 0:
+	cmd = "mkdir " + args.new_folder
+	os.system(cmd)
