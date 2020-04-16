@@ -33,5 +33,5 @@ Notey was developed to be way for me to manage my notes using markdown, sublime,
   * If for some reason allmark isn't doing the needful, you can restart it with `.\notey.py -a`
 
 ### TODO
-  * Add scripts for new high level folder create
   * Add templates for high level folders
+  * add auto updating into allmark docker image so it sees changes on the fly
