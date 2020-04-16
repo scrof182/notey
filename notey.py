@@ -30,7 +30,7 @@ minute = f"{now.minute:02d}"
 second = f"{now.second:02d}"
 month_spelled = now.strftime("%B")
 
-# build headers and paths
+# build header and paths
 daily_header = "# " + month_spelled + " " + day + " " + year 
 year_path = "daily_notes/" + year
 month_path = year_path + "/" + month

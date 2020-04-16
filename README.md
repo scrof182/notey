@@ -2,14 +2,20 @@
 
 ## Summary 
 
-Notey was developed to be way for me to manage my notes using markdown, sublime, and git.
+Notey was developed to be way for me to manage my notes using AllMark, markdown, sublime, and git.
+
+AllMark GitHub: https://github.com/andreaskoch/allmark
+AllMark Docker: https://hub.docker.com/r/andreaskoch/allmark/
 
 ## Prerequisites
-  * Be on a mac or Linux -- no Windows support currently
+  * OSX (Linux might work too, but it's not tested)
   * Docker installed 
+  	* https://docs.docker.com/docker-for-mac/install/
   * Git installed and configured
+    * https://www.code2bits.com/how-to-install-git-on-macos-using-homebrew/
+    * https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
   * Your favorite text editor; I use Sublime but Atom is also super great
-    * I recommend setting sublime to save on loss of focus with this line in your sublime settings page `"save_on_focus_lost": true`
+    * I recommend adding this line to your sublime preferences `"save_on_focus_lost": true`
 
 ## Usage
 
@@ -21,15 +27,17 @@ Notey was developed to be way for me to manage my notes using markdown, sublime,
 
 ### Initial Setup
   * Create a private git repo
+    * https://help.github.com/en/enterprise/2.13/user/articles/creating-a-new-repository
   * Clone the repo to the folder you want your notes stored in via 
-    * git clone git@ggitrepo.com:repo_path.git"
+    * `git clone $repo.git`
   * Change the `working_dir` variable in notey.py to the folder where the .git file is located
-  * It's a good idea to customize the list of top level folders to your needs
+  * Review and customize the list of top level folders to your needs by editing the `folders` variable
   * make python scripts executable via
     * `chmod +x notey.py`
   * run initial_run.py via `./notey.py -f`
   * This will create all necessary directories and file paths
   * Open directory in Sublime and edit files to your hearts content
+  * Navigate to http://localhost:8888 in order to view your files in AllMark
 
 ### Daily Usage
   * Run `notey.py -s` to create a new daily notes file in the correct directory
