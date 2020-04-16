@@ -2,7 +2,7 @@
 import os
 
 ## CHANGE_ME this is the directory where your notes are stored
-working_dir = "/Users/mselph/testing_notes"
+working_dir = "/full/path/to/working/dir"
 
 # git variables
 git_add = "git add *"

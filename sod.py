@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 
 ## CHANGE_ME this is the directory where your notes are stored
-working_dir = "/Users/mselph/testing_notes"
+working_dir = "/full/path/to/working/dir"
 os.chdir(working_dir)
 
 ## grab current time and setup branch and path variables 
@@ -63,4 +63,10 @@ if day_file_exist == False:
 	os.system(insert_header)
 	os.system(copy_template)
 
-
+## Pull down markdown viewer and start it
+allmark_kill = "docker rm -f allmark"
+allmark_pull = "docker pull andreaskoch/allmark"
+allmark_start = "docker run -dit --name allmark  -v $(pwd):/data -p 8888:33001 andreaskoch/allmark"
+os.system(allmark_kill)
+os.system(allmark_pull)
+os.system(allmark_start)
