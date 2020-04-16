@@ -4,7 +4,7 @@ from datetime import datetime
 import argparse
 
 ## CHANGE_ME this is the directory where your notes are stored
-working_dir = "/full/path/to/working/dir"
+working_dir = "/Users/mselph/testing_notes"
 os.chdir(working_dir)
 
 ##CHANGE_ME These are the high level folders that need to be created; modify if you want other folders created
@@ -13,11 +13,11 @@ folders = ["daily_notes", "incidents", "projects", "training"]
 
 parser = argparse.ArgumentParser(description='Notey Script for all things Note Related')
 g = parser.add_mutually_exclusive_group()
-g.parser.add_argument('-f', '--first', help='First Setup for Notey', action='store_true')
-g.parser.add_argument('-s', '--start_of_day', help='Used to create a new daily notes file from daily notes template', action='store_true')
-g.parser.add_argument('-h', '--high_level_folder', help='Used to create a new high level folder')
-g.parser.add_argument('-e', '--end_of_day', help='Perform a git push to remote repo', action='store_true')
-g.parser.add_argument('-a', '--allmark', help='Restart Allmark', action='store_true')
+g.add_argument('-f', '--first', help='First Setup for Notey', action='store_true')
+g.add_argument('-s', '--start_of_day', help='Used to create a new daily notes file from daily notes template', action='store_true')
+g.add_argument('-n', '--new_folder', help='Used to create a new high level folder')
+g.add_argument('-e', '--end_of_day', help='Perform a git push to remote repo', action='store_true')
+g.add_argument('-a', '--allmark', help='Restart Allmark', action='store_true')
 args = parser.parse_args()
 
 ## grab current time and setup path variables 
