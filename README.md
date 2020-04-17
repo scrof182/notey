@@ -20,9 +20,13 @@ AllMark Docker: https://hub.docker.com/r/andreaskoch/allmark/
 ## Usage
 
 '-f', '--first', help='First Setup for Notey'
+
 '-s', '--start_of_day', help='Used to create a new daily notes file from daily notes template'
+
 '-n', '--new_folder', help='Used to create a new high level folder'
+
 '-e', '--end_of_day', help='Perform a git push to remote repo', action='store_true'
+
 '-a', '--allmark', help='Restart Allmark'
 
 ### Initial Setup
