@@ -72,7 +72,7 @@ def create_inital_folders():
 def kill_and_restart_allmark():
 	allmark_kill = "docker rm -f allmark"
 	allmark_pull = "docker pull andreaskoch/allmark"
-	allmark_start = "docker run -dit --name allmark  -v $(pwd):/data -p 8888:33001 andreaskoch/allmark"
+	allmark_start = "docker run -dit --name allmark  -v $(pwd):/data -p 8888:33001 andreaskoch/allmark allmark serve /data --livereload"
 	os.system(allmark_kill)
 	os.system(allmark_pull)
 	os.system(allmark_start)
@@ -110,5 +110,6 @@ if args.allmark == True:
 	kill_and_restart_allmark()
 
 if args.new_folder != None and len(args.new_folder) > 0:
+
 	cmd = "mkdir " + args.new_folder
 	os.system(cmd)
