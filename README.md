@@ -12,7 +12,7 @@ AllMark Docker: https://hub.docker.com/r/andreaskoch/allmark/
   * Docker installed 
   	* https://docs.docker.com/docker-for-mac/install/
   * Git installed and configured
-    * https://www.code2bits.com/how-to-install-git-on-macos-using-homebrew/
+    * https://gist.github.com/derhuerst/1b15ff4652a867391f03
     * https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
   * Your favorite text editor; I use Sublime but Atom is also super great
     * I recommend adding this line to your sublime preferences `"save_on_focus_lost": true`
